@@ -13,7 +13,6 @@ builder.Services.AddSwaggerGen(c =>
 { 
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "PlatformService", Version = "v1" });
 });
-builder.WebHost.UseUrls("http://0.0.0.0:80");
 
 var app = builder.Build();
 
