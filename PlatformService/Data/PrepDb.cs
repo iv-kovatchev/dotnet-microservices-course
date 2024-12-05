@@ -27,7 +27,7 @@ namespace PlatformService.Data
                 );
 
                 context.SaveChanges();
-            }
+            } 
             else 
             {
                 Console.WriteLine("-----> We already have data");
