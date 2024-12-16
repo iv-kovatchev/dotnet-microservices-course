@@ -7,7 +7,23 @@ var builder = WebApplication.CreateBuilder(args);
 
 IConfiguration configuration = builder.Configuration;
 
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
+ if (builder.Environment.IsProduction()) {
+     var connectionString = configuration.GetConnectionString("PlatformsConn");
+     if (string.IsNullOrEmpty(connectionString))
+     {
+         throw new Exception("SQL Server connection string is not configured.");
+     }
+     else
+     {
+        Console.WriteLine("--> Using SqlServer Db");
+        builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(connectionString));
+     }
+ }
+ else {
+     Console.WriteLine("--> Using InMem Db");
+     builder.Services.AddDbContext<AppDbContext>(opt =>
+         opt.UseInMemoryDatabase("InMem"));
+ }
 
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
@@ -15,16 +31,18 @@ builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => 
-{ 
+builder.Services.AddSwaggerGen(c =>
+{
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "PlatformService", Version = "v1" });
 });
 
-Console.WriteLine($"--> CommandService Endpoint {configuration["CommandService"]}/api/c/platforms/");
+// Logging Environment
+Console.WriteLine($"--> Environment: {builder.Environment.EnvironmentName}");
+Console.WriteLine($"--> CommandService Endpoint {configuration["CommandService"]}");
 
 var app = builder.Build();
 
-if(app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
@@ -37,6 +55,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-PrepDb.PrepPopulation(app);
+PrepDb.PrepPopulation(app, app.Environment.IsProduction());
 
 app.Run();

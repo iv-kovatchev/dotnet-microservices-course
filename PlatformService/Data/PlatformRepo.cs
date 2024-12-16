@@ -16,7 +16,8 @@ namespace PlatformService.Data
 
         public void CreatePlatform(Platform plat)
         {
-            if(plat == null) {
+            if (plat == null)
+            {
                 throw new ArgumentNullException(nameof(plat));
             }
 
@@ -30,7 +31,13 @@ namespace PlatformService.Data
 
         public Platform GetPlatformById(int id)
         {
-            return _context.Platforms.FirstOrDefault(p => p.Id == id);
+            var platform = _context.Platforms.FirstOrDefault(p => p.Id == id);
+
+            if (platform == null)
+            {
+                throw new InvalidOperationException($"Platform with id {id} not found.");
+            }
+            return platform;
         }
 
         public bool SaveChanges()

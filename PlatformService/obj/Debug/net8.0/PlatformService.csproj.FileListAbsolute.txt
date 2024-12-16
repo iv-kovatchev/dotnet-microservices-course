@@ -171,3 +171,4 @@ C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\Platform
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\obj\Debug\net8.0\PlatformService.pdb
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\obj\Debug\net8.0\PlatformService.genruntimeconfig.cache
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\obj\Debug\net8.0\ref\PlatformService.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\appsettings.Production.json
