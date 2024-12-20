@@ -135,3 +135,5 @@ C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\Commands
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\obj\Debug\net8.0\CommandsService.pdb
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\obj\Debug\net8.0\CommandsService.genruntimeconfig.cache
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\obj\Debug\net8.0\ref\CommandsService.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\RabbitMQ.Client.dll

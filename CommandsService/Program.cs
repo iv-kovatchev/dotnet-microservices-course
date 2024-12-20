@@ -8,6 +8,12 @@ builder.Services.AddScoped<ICommandRepo, CommandRepo>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
+
+builder.Services.AddHostedService<MessageBusSubscriber>();
+
+//Message Bus - RabbitMQ Listening for event
+builder.Services.AddSingleton<IEventProcessor, EventProcessor>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c => 
 { 
