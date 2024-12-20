@@ -47,7 +47,11 @@ public class MessageBusClient : IMessageBusClient
     private void SendMessage(string message) {
         var body = Encoding.UTF8.GetBytes(message);
 
-        _channel.BasicPublish(exchange: "trigger", routingKey: "", basicProperties: null, body);
+        _channel.BasicPublish(exchange: "trigger", 
+            routingKey: "", 
+            basicProperties: null, 
+            body);
+        Console.WriteLine($"--> We have sent {message}");
     }
 
     private void RabbitMQ_ConnetionShutdown(object sender, ShutdownEventArgs e) {

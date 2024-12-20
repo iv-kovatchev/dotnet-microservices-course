@@ -67,7 +67,7 @@ public class PlatformsController : ControllerBase
 
         //Send async message with RabbitMQ - Bus message
         try {
-            var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformCreateDto);
+            var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(platformReadDto);
             platformPublishedDto.Event = "Platform_Published";
             _messageBusClient.PublishNewPlatform(platformPublishedDto);
         }

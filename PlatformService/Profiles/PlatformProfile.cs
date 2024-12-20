@@ -6,6 +6,7 @@ public class PlatformProfile : Profile {
     {
         CreateMap<Platform, PlatformReadDto>();
         CreateMap<PlatformCreateDto, Platform>();
-        CreateMap<PlatformReadDto, PlatformPublishedDto>();
+        CreateMap<PlatformReadDto, PlatformPublishedDto>()
+            .ForMember(dest => dest.Event, opt => opt.MapFrom(src => "DefaultEvent"));
     }
 }
