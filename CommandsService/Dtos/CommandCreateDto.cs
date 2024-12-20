@@ -4,7 +4,7 @@ public class CommandCreateDto {
     [Required]
     [MinLength(4)]
     [MaxLength(50)]
-    public required string HotTo { get; set; }
+    public required string HowTo { get; set; }
 
     [Required]
     [MinLength(4)]

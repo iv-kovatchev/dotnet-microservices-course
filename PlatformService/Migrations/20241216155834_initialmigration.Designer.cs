@@ -12,7 +12,7 @@ namespace PlatformService.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20241216155834_initialmigration")]
-    partial class initialmigration
+    partial class initialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
