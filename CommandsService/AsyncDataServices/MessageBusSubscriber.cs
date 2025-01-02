@@ -50,7 +50,7 @@ public class MessageBusSubscriber : BackgroundService
 
         consumer.Received += (ModuleHandle, ea) => 
         {
-            Console.WriteLine("--> Event Receive!");
+            Console.WriteLine("--> Event Received!");
 
             var body = ea.Body;
             var notificationMsg = Encoding.UTF8.GetString(body.ToArray());

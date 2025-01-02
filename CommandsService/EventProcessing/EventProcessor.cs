@@ -19,7 +19,7 @@ public class EventProcessor : IEventProcessor
 
         switch(eventType) {
             case EventType.PlatformPublished:
-                //TO DO
+                AddPlatform(message);
                 break;
             default:
                 break;
@@ -53,6 +53,7 @@ public class EventProcessor : IEventProcessor
                 if(!repo.ExternalPlatformExist(plat.ExternalId)) {
                     repo.CreatePlatform(plat);
                     repo.SaveChanges();
+                    Console.WriteLine("--> Platform added!");
                 }
                 else {
                     Console.WriteLine("--> Platform already exists...");
