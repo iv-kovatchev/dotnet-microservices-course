@@ -173,3 +173,10 @@ C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\Platform
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\obj\Debug\net8.0\PlatformService.pdb
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\obj\Debug\net8.0\PlatformService.genruntimeconfig.cache
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\obj\Debug\net8.0\ref\PlatformService.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\Grpc.AspNetCore.Server.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\PlatformService\bin\Debug\net8.0\Grpc.Net.Common.dll

@@ -1,4 +1,3 @@
-using System.Windows.Input;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using PlatformService.Data;
@@ -27,6 +26,9 @@ IConfiguration configuration = builder.Configuration;
 
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+
+//gRPC
+builder.Services.AddGrpc();
 
 //Message Bus - RabbitMQ
 builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
@@ -57,6 +59,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGrpcService<GrpcPlatformService>();
+app.MapGet("/protos/platforms.proto", async context => {
+   await context.Response.WriteAsync(File.ReadAllText("Protos/platforms.proto")); 
+});
 
 PrepDb.PrepPopulation(app, app.Environment.IsProduction());
 

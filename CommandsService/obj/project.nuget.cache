@@ -1,11 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "c86aA+wBfVA=",
+  "dgSpecHash": "1HhbwVhqqSA=",
   "success": true,
   "projectFilePath": "C:\\Users\\U438658\\OneDrive - Danfoss\\Desktop\\dotnet_microservices_course\\CommandsService\\CommandsService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\U438658\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\U438658\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\U438658\\.nuget\\packages\\google.protobuf\\3.29.2\\google.protobuf.3.29.2.nupkg.sha512",
+    "C:\\Users\\U438658\\.nuget\\packages\\grpc.core.api\\2.67.0\\grpc.core.api.2.67.0.nupkg.sha512",
+    "C:\\Users\\U438658\\.nuget\\packages\\grpc.net.client\\2.67.0\\grpc.net.client.2.67.0.nupkg.sha512",
+    "C:\\Users\\U438658\\.nuget\\packages\\grpc.net.common\\2.67.0\\grpc.net.common.2.67.0.nupkg.sha512",
+    "C:\\Users\\U438658\\.nuget\\packages\\grpc.tools\\2.68.1\\grpc.tools.2.68.1.nupkg.sha512",
     "C:\\Users\\U438658\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\U438658\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.11\\microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
     "C:\\Users\\U438658\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
