@@ -141,3 +141,6 @@ C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\Commands
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\Grpc.Core.Api.dll
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\Grpc.Net.Client.dll
 C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\Grpc.Net.Common.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\Grpc.AspNetCore.Server.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Users\U438658\OneDrive - Danfoss\Desktop\dotnet_microservices_course\CommandsService\bin\Debug\net8.0\Grpc.Net.ClientFactory.dll

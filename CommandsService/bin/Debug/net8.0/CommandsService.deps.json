@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Google.Protobuf": "3.29.2",
+          "Grpc.AspNetCore": "2.67.0",
           "Grpc.Net.Client": "2.67.0",
           "Grpc.Tools": "2.68.1",
           "Microsoft.AspNetCore.OpenApi": "8.0.11",
@@ -54,6 +55,36 @@
           }
         }
       },
+      "Grpc.AspNetCore/2.67.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.29.2",
+          "Grpc.AspNetCore.Server.ClientFactory": "2.67.0",
+          "Grpc.Tools": "2.68.1"
+        }
+      },
+      "Grpc.AspNetCore.Server/2.67.0": {
+        "dependencies": {
+          "Grpc.Net.Common": "2.67.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
+      "Grpc.AspNetCore.Server.ClientFactory/2.67.0": {
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.67.0",
+          "Grpc.Net.ClientFactory": "2.67.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
       "Grpc.Core.Api/2.67.0": {
         "runtime": {
           "lib/netstandard2.1/Grpc.Core.Api.dll": {
@@ -69,6 +100,18 @@
         },
         "runtime": {
           "lib/net8.0/Grpc.Net.Client.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.67.0.0"
+          }
+        }
+      },
+      "Grpc.Net.ClientFactory/2.67.0": {
+        "dependencies": {
+          "Grpc.Net.Client": "2.67.0",
+          "Microsoft.Extensions.Http": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Grpc.Net.ClientFactory.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.67.0.0"
           }
@@ -544,6 +587,14 @@
           }
         }
       },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Logging": "9.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
+          "Microsoft.Extensions.Options": "9.0.0"
+        }
+      },
       "Microsoft.Extensions.Logging/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "9.0.0",
@@ -808,6 +859,27 @@
       "path": "google.protobuf/3.29.2",
       "hashPath": "google.protobuf.3.29.2.nupkg.sha512"
     },
+    "Grpc.AspNetCore/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WjC3+Ri748j6IHYY73zwRPzJV0WFN97h9IkXrgcghk0WAgewDr03uUJzaSMC+qW1O7PcQNdUg3Pfb+73v0pxIQ==",
+      "path": "grpc.aspnetcore/2.67.0",
+      "hashPath": "grpc.aspnetcore.2.67.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CDWB7GLhi4XN2Luw7gDbZQhGaMuMb9yDDwbBc9MMfmXFJvzALEK1hsbBaILzd8uDmX9E5VPMcqQ4mQyHvQ2HmA==",
+      "path": "grpc.aspnetcore.server/2.67.0",
+      "hashPath": "grpc.aspnetcore.server.2.67.0.nupkg.sha512"
+    },
+    "Grpc.AspNetCore.Server.ClientFactory/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O5qaBd7T8yph5JHikA3lafYqsn+2QPM7Dwk0e/7HniiM4cIHpfdiBX5TSy/+5IIppZ27QeLYFgftK7QsG9uIkQ==",
+      "path": "grpc.aspnetcore.server.clientfactory/2.67.0",
+      "hashPath": "grpc.aspnetcore.server.clientfactory.2.67.0.nupkg.sha512"
+    },
     "Grpc.Core.Api/2.67.0": {
       "type": "package",
       "serviceable": true,
@@ -821,6 +893,13 @@
       "sha512": "sha512-ofTjJQfegWkVlk5R4k/LlwpcucpsBzntygd4iAeuKd/eLMkmBWoXN+xcjYJ5IibAahRpIJU461jABZvT6E9dwA==",
       "path": "grpc.net.client/2.67.0",
       "hashPath": "grpc.net.client.2.67.0.nupkg.sha512"
+    },
+    "Grpc.Net.ClientFactory/2.67.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-owkRL6j8ZXvLnn8SsFGCRiWoe/2wGv+u+TASAylzUtGbHLnw7IiFRoeTs0IgpCNTETvlMLVb0gHDiLGo+mJZ6g==",
+      "path": "grpc.net.clientfactory/2.67.0",
+      "hashPath": "grpc.net.clientfactory.2.67.0.nupkg.sha512"
     },
     "Grpc.Net.Common/2.67.0": {
       "type": "package",
@@ -1010,6 +1089,13 @@
       "sha512": "sha512-saxr2XzwgDU77LaQfYFXmddEDRUKHF4DaGMZkNB3qjdVSZlax3//dGJagJkKrGMIPNZs2jVFXITyCCR6UHJNdA==",
       "path": "microsoft.extensions.dependencymodel/9.0.0",
       "hashPath": "microsoft.extensions.dependencymodel.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "path": "microsoft.extensions.http/6.0.0",
+      "hashPath": "microsoft.extensions.http.6.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/9.0.0": {
       "type": "package",

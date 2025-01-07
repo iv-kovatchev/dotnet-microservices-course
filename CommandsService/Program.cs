@@ -11,9 +11,13 @@ builder.Services.AddControllers();
 
 builder.Services.AddHostedService<MessageBusSubscriber>();
 
+//gRPC
+builder.Services.AddScoped<IPlatformDataClient, PlatformDataClient>();
+
 //Message Bus - RabbitMQ Listening for event
 builder.Services.AddSingleton<IEventProcessor, EventProcessor>();
 
+builder.Services.AddGrpc();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c => 
 { 
@@ -35,6 +39,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//PrepDb.PrepPopulation(app);
+PrepDb.PrepPopulation(app);
 
 app.Run();
