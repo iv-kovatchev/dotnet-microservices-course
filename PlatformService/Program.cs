@@ -29,19 +29,9 @@ builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 
 //gRPC
-builder.Services.AddGrpc();
-
-// builder.WebHost.UseKestrel(options =>
-// {
-//     // Clear IConfiguration bindings
-//     options.ConfigureEndpointDefaults(_ => { });
-
-//     // Bind to localhost:5082 using HTTP/2
-//     options.ListenLocalhost(5082, listenOptions =>
-//     {
-//         listenOptions.Protocols = HttpProtocols.Http2;
-//     });
-// });
+builder.Services.AddGrpc(options => {
+    options.EnableDetailedErrors = true;
+});
 
 //Message Bus - RabbitMQ
 builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
